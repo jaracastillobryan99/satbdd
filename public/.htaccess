@@ -1,0 +1,9 @@
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Si el archivo o directorio solicitado NO existe físicamente...
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ...entonces redirigir todo hacia index.php
+RewriteRule ^ index.php [QSA,L]
