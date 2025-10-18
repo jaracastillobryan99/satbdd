@@ -2,6 +2,11 @@
 use Psr\Container\ContainerInterface;
 use App\Repositories\EstadoBddRepository;
 use App\Services\EstadoBddService;
+use Slim\Views\Twig;
+use Slim\Views\TwigMiddleware;
+
+
+
 
 
 
@@ -19,6 +24,15 @@ return [
             PDO::ATTR_EMULATE_PREPARES => false,
         ]);
     },
+
+     // 🧩 Twig View Template
+    Twig::class => function () {
+        $twig = Twig::create(__DIR__ . '/../views', [
+            'cache' => false, // true si quieres usar caché
+        ]);
+        return $twig;
+    },
+
     
     // 📦 Repositorios
     EstadoBddRepository::class => function (ContainerInterface $c) {
