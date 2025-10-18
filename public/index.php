@@ -21,6 +21,8 @@ $dotenv->safeLoad();
 
 $containerBuilder = new ContainerBuilder();
 $containerBuilder->addDefinitions(__DIR__ . '/../config/Dependencies.php');
+$containerBuilder->addDefinitions(__DIR__ . '/../config/DependenciesApp.php');
+
 $container = $containerBuilder->build();
 
 

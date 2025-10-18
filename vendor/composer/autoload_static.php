@@ -69,6 +69,7 @@ class ComposerStaticInit94525221bedf1098041b71ddae00895c
         ),
         'A' => 
         array (
+            'App\\TwigFront\\' => 14,
             'App\\' => 4,
         ),
     );
@@ -159,6 +160,10 @@ class ComposerStaticInit94525221bedf1098041b71ddae00895c
         'DI\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/php-di/src',
+        ),
+        'App\\TwigFront\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/twigfront',
         ),
         'App\\' => 
         array (
